@@ -14,6 +14,10 @@ from sentence_transformers import SentenceTransformer
 from langchain.embeddings.base import Embeddings
 from langchain_community.document_loaders import PyPDFLoader
 
+try:
+    from langchain_pinecone import PineconeVectorStore
+except ImportError:
+    from langchain_community.vectorstores import Pinecone as PineconeVectorStore
 load_dotenv()
 
 # ── EMBEDDING CLASS ──────────────────────────────────
