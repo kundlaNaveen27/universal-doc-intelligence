@@ -7,8 +7,10 @@ langchain-groq
 langchain-pinecone
 langchain-community
 langchain-text-splitters
+langchain-core
 sentence-transformers
 streamlit
 python-dotenv
 pypdf
 cryptography
+groq
