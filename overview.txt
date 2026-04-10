@@ -1,0 +1,32 @@
+extractor.py
+→ Opens any PDF
+→ Extracts text (pdfplumber)
+→ Extracts tables (pdfplumber)
+→ Extracts images (PyMuPDF)
+→ Sends images to Vision AI for description
+→ Returns everything as clean text
+
+domains.py
+→ Contains sector-specific prompts
+→ Medical, Legal, Financial, Insurance, General
+→ Example questions per sector
+
+traditional_rag.py
+→ Takes extracted text
+→ Chunks it
+→ Stores in Pinecone
+→ Searches by similarity
+→ Good for large documents
+
+vectorless_rag.py
+→ Takes extracted text
+→ Dumps entire content into AI context
+→ AI finds answer itself
+→ Good for small documents
+
+app.py
+→ User uploads PDF
+→ Selects sector (Medical/Legal/Financial etc.)
+→ Selects RAG mode (Traditional/Vectorless)
+→ Asks questions
+→ Gets answers with citations
